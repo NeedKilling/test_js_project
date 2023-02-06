@@ -1,22 +1,19 @@
 "use strict"
 
-const activeUser = "makar";
-let name="Джон";
-let admin= name;
-alert(`Admin это ${admin}`)
+const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?","");
 
-console.log('HELLO')
-
-let object = {
-    userName:"makar",
-    age: 19,
+let PersonalMovieDB = {
+    count:numberOfFilms,
+    movies:{},
+    actors:{},
+    genres:[],
+    privat:false
 }
-console.log("Имя пользователя: "+object.userName+" возраст пользователя: "+object.age)
-let arr=['orange.jpg', 'plum.png', 'apple.bmp']
-console.log(arr[0])
+const a = prompt("Какой последний фильм вы посмотрели?",""),
+    b = prompt("На сколько вы его оцените по десяти бальной шкале",""),
+    c = prompt("Какой последний фильм вы посмотрели?",""),
+    d = prompt("На сколько вы его оцените по десяти бальной шкале","");
 
-// const result = confirm("are you here?");
-// console.log(result);
-
-const userAnswer = +prompt("Сколько вам лет?", "18");
-console.log(userAnswer);
+    PersonalMovieDB.movies[a] = b;
+    PersonalMovieDB.movies[c] = d;
+console.log(PersonalMovieDB);
