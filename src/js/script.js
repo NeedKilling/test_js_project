@@ -17,3 +17,28 @@ const a = prompt("Какой последний фильм вы посмотре
     PersonalMovieDB.movies[a] = b;
     PersonalMovieDB.movies[c] = d;
 console.log(PersonalMovieDB);
+
+
+let result;
+let num  = 4;
+switch(num){
+    case 1:
+        result = "зима";
+        console.log(result);
+        break;
+    case 2:
+        result = "весна";
+        console.log(result);
+        break;
+    case 3:
+        result = "лето";
+        console.log(result);
+        break;
+    case 4:
+        result = "осень";
+        console.log(result);
+        break;
+}
+
+
+
