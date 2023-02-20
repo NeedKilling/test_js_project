@@ -137,17 +137,18 @@ const datar = [5, 10, 'Shopping', 20, 'Homework'];
 
 
 
-    const lines = 7;
+    const lines = 5;
     let res = '';
-    for(let i = 0;i<lines;i++){
-        for(let j = 0;j < i;j++){
-            for(let k = lines;k > j;k--){
-                res+=' '
-            }
-            res +="*"
+    for(let i = 0;i<=lines;i++){
+        for(let j = 0;j < lines-i;j++){
+            res+=" "
         }
+        for (let j = 0; j < (2 * i + 1); j++) {
+            res += "*"; // и здесь j
+        }
+        
         res +='\n'
     }
-console.log(res)
+    console.log(res)
 
    
