@@ -187,9 +187,10 @@ console.log(array)
 
 
 let rolik=0;
-const grab = [1,2,3,4,6,8,12,15,23,54];
+const grab = [1,2,3,4,6,12,15,23,54];
 for(i = 0 ; i<grab.length;i++){
     if(grab[i]%2==0){
-        console.log(grab[i])
+        rolik++;
     }
 }
+console.log(rolik)
