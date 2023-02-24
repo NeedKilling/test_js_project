@@ -87,3 +87,11 @@ let PersonalMovieDB = {
 
 console.log(PersonalMovieDB);
 
+
+
+
+function cormaner(text){
+    console.log(text)
+}
+
+cormaner("bilbobegins");

@@ -89,3 +89,5 @@ if ((+ravense[0] + +ravense[1] + +ravense[2])==(+ravense[3] + +ravense[4] + +rav
 }else{
     console.log("no");
 }
+
+
