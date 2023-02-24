@@ -152,3 +152,44 @@ const datar = [5, 10, 'Shopping', 20, 'Homework'];
     console.log(res)
 
    
+
+
+//     let arr =[];
+// for(let i = 0;i<20;i+=2){
+//     arr.push(i)
+// }
+// console.log(arr)
+
+let arr =[];
+for(let i = 0;i<20;i++){
+    if(i%2==0){
+       arr.push(i)
+    }
+}
+console.log(arr)
+
+let arrr =[];
+rol = 30;
+while(rol>0){
+    if(rol%3==0){
+        arrr.push(rol)
+    }
+    rol--;
+}
+console.log(arrr)
+
+
+let array = [];
+for(let i = 0;i<10;i++){
+    array[i]=i*i;
+}
+console.log(array)
+
+
+let rolik=0;
+const grab = [1,2,3,4,6,8,12,15,23,54];
+for(i = 0 ; i<grab.length;i++){
+    if(grab[i]%2==0){
+        console.log(grab[i])
+    }
+}
