@@ -95,3 +95,46 @@ function cormaner(text){
 }
 
 cormaner("bilbobegins");
+
+
+
+function sayHello(name){
+    console.log(typeof(name))
+   
+}
+
+sayHello("rilev")
+
+function sayHello(name) {
+    return console.log(typeof(`Привет,${name}`))
+ }
+ sayHello("ukrm")
+
+
+
+ function returnNeighboringNumbers(number) {
+    const massiv = [number-1,number,number+1]
+    return massiv
+ }
+ console.log(returnNeighboringNumbers(4))
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+ function getMathResult(main,number) {
+    let result = main;
+    if( typeof number !== "number" || number <=0){
+       return main
+    }else{
+    }
+    for(i = 2;i<=number;i++){
+       result += `--${main*i}`
+         
+     }
+     return result;
+    }
+   
+ console.log(getMathResult(10,4))
+ ////////////////////////////////////////////////////////////////////////////////////////
+
+
+ 
