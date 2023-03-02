@@ -213,3 +213,5 @@ for(let i = 65;i <= 220;i++){
 }
 console.log(strin)
 console.log(( 'Österreich'.localeCompare('Zealand') ))//- // + //0 
+
+
