@@ -179,13 +179,13 @@ let arrayNumber = [];
 let compute = 0;
 
 function arrayComputeNumber(length,number){
-    for(let i = 0;i<length;i++){
-        arrayNumber[i] = i;
-        arrayNumber[i] = String(arrayNumber[i])
-        if(arrayNumber[i].includes(number)){
+    for(let i = 1;i<length;i++){
+        arrayNumber[i-1] = i;
+        arrayNumber[i-1] = String(arrayNumber[i-1])
+        if(arrayNumber[i-1].includes(number)){
             compute++
         }
-        if(arrayNumber[i].includes(String(number)+String(number))){
+        if(arrayNumber[i-1].includes(String(number)+String(number))){
             compute++
         }
     }
