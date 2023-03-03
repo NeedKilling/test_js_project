@@ -22,7 +22,7 @@ let PersonalMovieDB = {
 
    function rememberMyFilms(){
     for(let i = 0;i<2;i++){
-        const a = prompt("Какой последний фильм вы посмотрели?",""),
+        const a = prompt("Какой последний фильм вы посмотрели?","").trim(),
               b = prompt("На сколько вы его оцените по десяти бальной шкале","");
         if(a !=null && b !=null && a != '' && b != '' && a.length < 50 && b.length < 50 ){
             PersonalMovieDB.movies[a] = b;
