@@ -215,3 +215,107 @@ console.log(strin)
 console.log(( 'Österreich'.localeCompare('Zealand') ))//- // + //0 
 
 
+function calculateVolumeAndArea(rib) {
+    if(number<0 || typeof(number) !== "number" || (number % 1) != 0){
+        return console.log("При вычеслении произошла ошибка")
+    }else{
+       var volume = rib * rib * rib;
+       var area = 6*(rib*rib)
+    }
+    
+    return console.log(`'Объем куба: ${volume}, площадь всей поверхности: ${area}'`)
+}
+calculateVolumeAndArea(5.5)
+
+
+function getCoupeNumber(number){
+    if(number<0 || typeof(number) !== "number" || (number % 1) != 0){
+        return console.log("Ошибка. Проверьте правильность введенного номера места")
+    }else if(number == 0 || number > 36){
+        return console.log("Таких мест в вагоне не существует")
+    }
+
+    return console.log(Math.ceil(number/4))
+
+}
+getCoupeNumber(35)
+
+
+
+
+
+
+
+function getTimeFromMinutes(time) {
+    const hours = Math.floor(time/60);
+    const minuts = time % 60;
+    let hoursStr = '';
+    switch(hours){
+        case 1:
+            hoursStr = 'час'
+            break;
+        case 2:
+            hoursStr = 'часа'
+            break;
+        case 3:
+            hoursStr = 'часа'
+            break;
+        case 4:
+            hoursStr = 'часа'
+            break;
+        default:
+            hoursStr = 'часов'
+            break;
+    }
+    if(time<0 || typeof(time) !== "time" || (time % 1) != 0){
+        return console.log("Ошибка, проверьте данные")
+    }
+    return console.log(`Это ${hours} ${hoursStr} и ${minuts} минут`)
+}
+getTimeFromMinutes(1000)
+
+
+
+
+function findMaxNumber(one,two,tree,four) {
+    const arr = [one,two,tree,four];
+    let max = 0;
+    if (typeof(one) !== 'one' ||
+        typeof(two) !== 'two' ||
+        typeof(tree) !== 'tree' ||
+        typeof(four) !== 'four') {
+        //return console.log(0);
+        }
+    for(i=0;i<arr.length;i++){
+        if(arr[i] > max){
+            max = arr[i];
+        }
+    }
+        
+        
+        return console.log(max)
+    }
+findMaxNumber(1,2,5,0)
+
+
+
+
+function fib(number){
+    if(typeof(number) !== 'number'|| number <= 0 || !Number.isInteger(number)){
+        return 0
+    }else if(number ===1){
+        return 0
+    }
+    let a = 0;
+    let b = 1;
+    let c;
+    let result = `${a} ${b}`;
+    for(let i = 0; i < number-2; i++){
+        c = a + b
+        result += ` ${c}`
+        a=b;
+        b=c;
+    }
+    return result
+}
+console.log(fib(8))
