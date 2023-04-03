@@ -319,3 +319,241 @@ function fib(number){
     return result
 }
 console.log(fib(8))
+
+
+
+
+
+    const obj = {
+        name: 'test',
+        width: 1024,
+        height: 1024,
+        color:{
+            border: 'black',
+            bg: 'wite'
+        },
+        makeTest: function(){
+            console.log("test")
+        }
+    }
+
+    obj.rule = true;
+    obj.height = 1080;
+    delete obj.width
+    console.log(obj)
+    obj.makeTest();
+    console.log(Object.keys(obj).length)
+// let counter= 0;
+//     for(let key in obj){
+//         if(typeof(obj[key]) === 'object'){
+//             for(let i in obj[key]){
+//                 console.log(`Свойство: ${i} имеет значение ${obj[key][i]}`)
+//                 counter++;
+//             }
+//         }else{
+//             console.log(`Свойство: ${key} имеет значение ${obj[key]}`);
+//             counter++;
+//         }    
+//     }
+
+
+
+
+const arrNumber = [1,2,'bim',3,6,'bom',10];
+// for(let i = 0;i<arrNumber.length;i++){
+//     console.log(arrNumber[i])
+// }
+
+// for(let value of arrNumber){
+//     console.log(value)
+// }
+
+arrNumber.forEach(function(item){
+    if(typeof(item) === 'number'){
+        item*=2
+    }else if(typeof(item)==='string'){
+        item+='-bam'
+    }
+    return console.log(item)
+})
+
+
+let strProduct = 'apple,pinaple,orange,potato'
+let arrayStr = [];
+console.log(strProduct)
+arrayStr =  strProduct.split(",")
+console.log(arrayStr)
+strProduct = arrayStr.join(' ; ')
+console.log(strProduct)
+console.log(`Отсартированный массив: (${arrayStr.sort()})`)
+
+
+
+function copy(mainObj){
+    objCopy = {}
+    for(let key in mainObj){
+        objCopy[key] = mainObj[key]
+    }
+    return objCopy;
+}
+
+const numbers = {
+    a:2,
+    b:5,
+    c:{
+        x: 3,
+        y: 1,
+        z: 7
+    }
+}
+const newNumbers = copy(numbers);
+newNumbers.a = 10;
+newNumbers.c.x = 0
+console.log(newNumbers)
+console.log(numbers)
+
+
+const add = {
+    d: 25,
+    e: 41,
+};
+//console.log(Object.assign(numbers,add))
+
+const all = Object.assign({},add)
+all.d = 100;
+console.log(all)
+console.log(add)
+
+
+const video = ['youtube','vimeo','rutube'],
+      blogs = ['worldpress','bloger','livejornal'],
+      internet =[...video,...blogs,'vk','twitter']
+      console.log(internet)
+
+
+
+
+///////////////////////////////////////////////////////////////
+const personalPlanPeter = {
+name: "Peter",
+age: "29",
+skills: {
+    languages: ['ru', 'eng'],
+    programmingLangs: {
+        js: '20%',
+        php: '10%'
+    },
+    exp: '1 month'
+},
+showAgeAndLangs: function(lang){
+    const {age} = lang
+    const {languages} = lang.skills
+    let str = `Мне ${age} и я владею языками: `
+    languages.forEach(function(item){
+        str+= `${item.toUpperCase()} `
+    })
+    return console.log(str)
+}
+    
+};
+
+personalPlanPeter.showAgeAndLangs(personalPlanPeter)
+
+    function showExperience(plan) {
+        const {exp} = plan.skills
+        return console.log(exp)
+    }
+showExperience(personalPlanPeter)
+
+    function showProgrammingLangs(plan) {
+        let str = ''
+        const {programmingLangs} = plan.skills
+        for(let key in programmingLangs){
+            str += `Язык ${key} изучен на ${programmingLangs[key] }`
+        }
+        return console.log(str)
+    }
+showProgrammingLangs(personalPlanPeter)
+
+
+const rabota = [];
+const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+let string =  'Семья состоит из:';
+function showFamily(arr) {
+    if(arr.length===0){
+        string = 'Семья пуста'
+        return console.log(string)
+    }else{
+        // for(const key of arr){
+        //     string += ` ${key}`
+        // }
+        return console.log(string+arr.join(' '))
+    }
+}
+showFamily(rabota)
+
+
+
+
+
+const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+let strine;
+// for(let i = 0;i<favoriteCities.length; i++){
+//      strine = favoriteCities[i].toUpperCase()
+//      console.log(strine)
+// }
+// console.log(strine)
+function standardizeStrings(arr) {
+    for(const key of arr){
+        strine = key.toLowerCase()
+        console.log(strine)
+    }
+    
+}
+standardizeStrings(favoriteCities)
+
+
+const someString = 'This is some strange string';
+const fffafaf= 131312131
+let stringSub = '';
+
+function reverse(str) {
+   
+    if(typeof str==='string'){
+        for(let i = str.length-1; i>=0;i--){
+            stringSub +=`${str[i]}`
+        }
+        return console.log(stringSub)
+      
+    }else{
+        return console.log("Ошибка")
+    }
+
+}
+
+reverse(someString)
+
+
+
+const baseCurrencies = ['USD', 'EUR'];
+const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+const twoArrays = baseCurrencies.concat(additionalCurrencies)
+
+function availableCurr(arr, missingCurr) {
+let stroka ='Доступные валюты:\n'
+if(arr.length ===0 ){
+    return "Нет доступных валют"
+}else{
+    //const a = arr.filter((strin) => strin !== missingCurr); фильтрует и записывает в переменную
+    for(let key of arr){
+        if(key === missingCurr){    //стравнивает ключ 
+            continue                //пропускает итерацию
+        }
+        stroka += `${key}\n`
+    }
+    return console.log(stroka)
+}
+}
+
+availableCurr(twoArrays,'CNY')
+//availableCurr([...baseCurrencies,...additionalCurrencies],'CNY')
