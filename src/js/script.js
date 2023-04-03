@@ -533,7 +533,28 @@ function reverse(str) {
 
 reverse(someString)
 
+const baseCurrencies = ['USD', 'EUR'];
+const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+const twoArrays = baseCurrencies.concat(additionalCurrencies)
 
+function availableCurr(arr, missingCurr) {
+let stroka ='Доступные валюты:\n'
+if(arr.length ===0 ){
+    return "Нет доступных валют"
+}else{
+    //const a = arr.filter((strin) => strin !== missingCurr); фильтрует и записывает в переменную
+    for(let key of arr){
+        if(key === missingCurr){    //стравнивает ключ 
+            continue                //пропускает итерацию
+        }
+        stroka += `${key}\n`
+    }
+    return console.log(stroka)
+}
+}
+
+availableCurr(twoArrays,'CNY')
+//availableCurr([...baseCurrencies,...additionalCurrencies],'CNY')
 
 
 
